@@ -4,7 +4,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'authentication_page_model.dart';
 export 'authentication_page_model.dart';
 
@@ -38,15 +41,15 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 400.ms,
-          begin: const Offset(0.0, 80.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(0.0, 80.0),
+          end: Offset(0.0, 0.0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 150.ms,
           duration: 400.ms,
-          begin: const Offset(0.8, 0.8),
-          end: const Offset(1.0, 1.0),
+          begin: Offset(0.8, 0.8),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -65,8 +68,8 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: const Offset(0.0, 20.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(0.0, 20.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -85,8 +88,8 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 400.ms,
-          begin: const Offset(0.0, 20.0),
-          end: const Offset(0.0, 0.0),
+          begin: Offset(0.0, 20.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -139,7 +142,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(32.0, 12.0, 32.0, 32.0),
+                padding: EdgeInsetsDirectional.fromSTEB(32.0, 12.0, 32.0, 32.0),
                 child: Container(
                   width: double.infinity,
                   height: 230.0,
@@ -147,10 +150,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     borderRadius: BorderRadius.circular(16.0),
                   ),
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 72.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 72.0),
                     child: Text(
                       'Les actualités ',
                       style: FlutterFlowTheme.of(context).displaySmall,
@@ -159,28 +162,28 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 170.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 170.0, 0.0, 0.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: EdgeInsets.all(12.0),
                           child: Container(
                             width: double.infinity,
                             height: MediaQuery.sizeOf(context).width >= 768.0
                                 ? 530.0
                                 : 630.0,
-                            constraints: const BoxConstraints(
+                            constraints: BoxConstraints(
                               maxWidth: 570.0,
                             ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -195,12 +198,12 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Column(
                                 children: [
                                   Align(
-                                    alignment: const Alignment(0.0, 0),
+                                    alignment: Alignment(0.0, 0),
                                     child: TabBar(
                                       isScrollable: true,
                                       labelColor: FlutterFlowTheme.of(context)
@@ -209,7 +212,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                           FlutterFlowTheme.of(context)
                                               .secondaryText,
                                       labelPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               32.0, 0.0, 32.0, 0.0),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium,
@@ -219,7 +222,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                       indicatorColor:
                                           FlutterFlowTheme.of(context).primary,
                                       indicatorWeight: 3.0,
-                                      tabs: const [
+                                      tabs: [
                                         Tab(
                                           text: 'Inscription',
                                         ),
@@ -239,10 +242,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, -1.0),
+                                              AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 16.0, 24.0, 0.0),
                                             child: SingleChildScrollView(
                                               child: Column(
@@ -273,7 +276,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 24.0),
                                                     child: Text(
@@ -288,10 +291,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: double.infinity,
                                                       child: TextFormField(
                                                         controller: _model
@@ -299,7 +302,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                         focusNode: _model
                                                             .emailAddressCreateFocusNode,
                                                         autofocus: true,
-                                                        autofillHints: const [
+                                                        autofillHints: [
                                                           AutofillHints.email
                                                         ],
                                                         obscureText: false,
@@ -371,7 +374,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           contentPadding:
-                                                              const EdgeInsets.all(
+                                                              EdgeInsets.all(
                                                                   24.0),
                                                         ),
                                                         style:
@@ -390,10 +393,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: double.infinity,
                                                       child: TextFormField(
                                                         controller: _model
@@ -401,7 +404,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                         focusNode: _model
                                                             .passwordCreateFocusNode,
                                                         autofocus: true,
-                                                        autofillHints: const [
+                                                        autofillHints: [
                                                           AutofillHints.password
                                                         ],
                                                         obscureText: !_model
@@ -475,7 +478,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           contentPadding:
-                                                              const EdgeInsets.all(
+                                                              EdgeInsets.all(
                                                                   24.0),
                                                           suffixIcon: InkWell(
                                                             onTap: () =>
@@ -514,10 +517,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: double.infinity,
                                                       child: TextFormField(
                                                         controller: _model
@@ -525,7 +528,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                         focusNode: _model
                                                             .confirmedPasswordCreateFocusNode,
                                                         autofocus: true,
-                                                        autofillHints: const [
+                                                        autofillHints: [
                                                           AutofillHints.password
                                                         ],
                                                         obscureText: !_model
@@ -599,7 +602,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           contentPadding:
-                                                              const EdgeInsets.all(
+                                                              EdgeInsets.all(
                                                                   24.0),
                                                           suffixIcon: InkWell(
                                                             onTap: () =>
@@ -638,11 +641,11 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -661,7 +664,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                             ScaffoldMessenger
                                                                     .of(context)
                                                                 .showSnackBar(
-                                                              const SnackBar(
+                                                              SnackBar(
                                                                 content: Text(
                                                                   'Passwords don\'t match!',
                                                                 ),
@@ -695,14 +698,14 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                           width: 230.0,
                                                           height: 52.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -723,7 +726,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -744,10 +747,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, -1.0),
+                                              AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 16.0, 24.0, 0.0),
                                             child: SingleChildScrollView(
                                               child: Column(
@@ -778,7 +781,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 24.0),
                                                     child: Text(
@@ -793,10 +796,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: double.infinity,
                                                       child: TextFormField(
                                                         controller: _model
@@ -804,7 +807,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                         focusNode: _model
                                                             .emailAddressFocusNode,
                                                         autofocus: true,
-                                                        autofillHints: const [
+                                                        autofillHints: [
                                                           AutofillHints.email
                                                         ],
                                                         obscureText: false,
@@ -876,7 +879,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           contentPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       24.0,
@@ -899,10 +902,10 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 16.0),
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: double.infinity,
                                                       child: TextFormField(
                                                         controller: _model
@@ -910,7 +913,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                         focusNode: _model
                                                             .passwordFocusNode,
                                                         autofocus: true,
-                                                        autofillHints: const [
+                                                        autofillHints: [
                                                           AutofillHints.password
                                                         ],
                                                         obscureText: !_model
@@ -984,7 +987,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   .of(context)
                                                               .secondaryBackground,
                                                           contentPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       24.0,
@@ -1027,11 +1030,11 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1067,14 +1070,14 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                           width: 230.0,
                                                           height: 52.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1095,7 +1098,7 @@ class _AuthenticationPageWidgetState extends State<AuthenticationPageWidget>
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,

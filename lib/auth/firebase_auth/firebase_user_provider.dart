@@ -8,7 +8,6 @@ export '../base_auth_user_provider.dart';
 class ActualitesFirebaseUser extends BaseAuthUser {
   ActualitesFirebaseUser(this.user);
   User? user;
-  @override
   bool get loggedIn => user != null;
 
   @override

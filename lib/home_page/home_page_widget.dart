@@ -3,7 +3,11 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -46,7 +50,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             context.pushNamed(
               'AddPage',
               extra: <String, dynamic>{
-                kTransitionInfoKey: const TransitionInfo(
+                kTransitionInfoKey: TransitionInfo(
                   hasTransition: true,
                   transitionType: PageTransitionType.bottomToTop,
                   duration: Duration(milliseconds: 200),
@@ -75,7 +79,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: FlutterFlowTheme.of(context).primary,
                 borderRadius: 20.0,
@@ -128,7 +132,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     final columnPostsRecord =
                         columnPostsRecordList[columnIndex];
                     return Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -152,7 +156,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: const [
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 8.0,
                                 color: Color(0x230F1113),
@@ -161,7 +165,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ],
                             borderRadius: BorderRadius.circular(12.0),
                             border: Border.all(
-                              color: const Color(0xFFF1F4F8),
+                              color: Color(0xFFF1F4F8),
                               width: 1.0,
                             ),
                           ),
@@ -172,7 +176,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 tag: columnPostsRecord.photoUrl,
                                 transitionOnUserGestures: true,
                                 child: ClipRRect(
-                                  borderRadius: const BorderRadius.only(
+                                  borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(0.0),
                                     bottomRight: Radius.circular(0.0),
                                     topLeft: Radius.circular(12.0),
@@ -187,7 +191,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 12.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -218,7 +222,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 .override(
                                                   fontFamily:
                                                       'Plus Jakarta Sans',
-                                                  color: const Color(0xFF14181B),
+                                                  color: Color(0xFF14181B),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.normal,
                                                 ),

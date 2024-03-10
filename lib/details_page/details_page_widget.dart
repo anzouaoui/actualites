@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'details_page_model.dart';
 export 'details_page_model.dart';
 
@@ -58,10 +60,10 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                         child: Container(
                           width: double.infinity,
-                          constraints: const BoxConstraints(
+                          constraints: BoxConstraints(
                             maxWidth: 570.0,
                           ),
                           decoration: BoxDecoration(
@@ -70,16 +72,16 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 12.0),
                                     child: Text(
                                       valueOrDefault<String>(
@@ -97,7 +99,7 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.all(2.0),
+                                  padding: EdgeInsets.all(2.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10.0),
                                     child: Image.network(
@@ -109,7 +111,7 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 12.0),
                                   child: Text(
                                     valueOrDefault<String>(
@@ -130,11 +132,11 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                                       size: 30.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
-                                          widget.post?.likes.toString(),
+                                          widget.post?.likes?.toString(),
                                           '0',
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -150,7 +152,7 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 0.0),
                                       child: Text(
                                         ' j\'aime',
@@ -174,18 +176,18 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.safePop();
                           },
                           text: 'Fermer',
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 50.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -195,7 +197,7 @@ class _DetailsPageWidgetState extends State<DetailsPageWidget> {
                                   color: Colors.white,
                                 ),
                             elevation: 3.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),
