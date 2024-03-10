@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
@@ -91,6 +92,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AuthenticationPage',
           path: '/authenticationPage',
           builder: (context, params) => const AuthenticationPageWidget(),
+        ),
+        FFRoute(
+          name: 'AddPage',
+          path: '/addPage',
+          builder: (context, params) => const AddPageWidget(),
+        ),
+        FFRoute(
+          name: 'DetailsPage',
+          path: '/detailsPage',
+          asyncParams: {
+            'post': getDoc(['posts'], PostsRecord.fromSnapshot),
+          },
+          builder: (context, params) => DetailsPageWidget(
+            post: params.getParam('post', ParamType.Document),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
