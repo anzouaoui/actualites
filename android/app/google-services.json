@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "442239712064",
+    "project_id": "actualites-83b0ec",
+    "storage_bucket": "actualites-83b0ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442239712064:android:0f8e7290fdad5b3c2518a5",
+        "android_client_info": {
+          "package_name": "com.anoukzouaoui.actualites"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD3MLe_KoXCF8OamicLZ-hvPzSt0aCob0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
